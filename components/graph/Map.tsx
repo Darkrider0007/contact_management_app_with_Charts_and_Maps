@@ -8,7 +8,6 @@ interface CountryData {
   countryInfo: {
     lat: number;
     long: number;
-    flag: string; // Add a flag property to the interface
   };
   active: number;
   recovered: number;
@@ -29,14 +28,13 @@ const MapComponent: React.FC = () => {
   }, []);
 
   return (
-    <MapContainer center={[20, 0]} zoom={2} style={{ height: '500px' }}>
+    <MapContainer center={[20, 0] as [number, number]} zoom={2} style={{ height: '500px' }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {data.map(country => (
         <Marker key={country.country} position={[country.countryInfo.lat, country.countryInfo.long]}>
           <Popup>
             <div>
               <h2>{country.country}</h2>
-              <img src={country.countryInfo.flag} alt={`${country.country} Flag`} width="40" />
               <p>Total Active: {country.active}</p>
               <p>Total Recovered: {country.recovered}</p>
               <p>Total Deaths: {country.deaths}</p>
