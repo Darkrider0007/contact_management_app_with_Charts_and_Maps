@@ -1,7 +1,9 @@
 "use client"
 import LineGraph from '@/components/graph/LineGraph';
-import MapComponent from '@/components/graph/Map';
 import React from 'react';
+import dynamic from 'next/dynamic'; // Import dynamic from 'next/dynamic'
+
+const MapComponent = dynamic(() => import('@/components/graph/Map'), { ssr: false }); // Dynamically import MapComponent
 
 const page: React.FC = () => {
   return (
@@ -22,3 +24,4 @@ const page: React.FC = () => {
 };
 
 export default page;
+
