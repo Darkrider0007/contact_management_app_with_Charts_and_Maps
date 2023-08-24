@@ -19,12 +19,13 @@
     "eslint-config-next": "13.4.19",
     "leaflet": "^1.9.4",
     "next": "13.4.19",
+    "package-name": "^0.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-leaflet": "^4.2.1",
     "reactstrap": "^9.2.0",
-    "typescript": "5.1.6"
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",

@@ -3,7 +3,7 @@ import LineGraph from '@/components/graph/LineGraph';
 import React from 'react';
 import dynamic from 'next/dynamic'; // Import dynamic from 'next/dynamic'
 
-const MapComponent = dynamic(() => import('@/components/graph/Map'), { ssr: false }); // Dynamically import MapComponent
+//const MapComponent = dynamic(() => import('@/components/graph/Map'), { ssr: false }); // Dynamically import MapComponent
 
 const page: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const page: React.FC = () => {
         </div>
         <div className="chart">
           <h2>COVID-19 Map</h2>
-          <MapComponent />
+          {/* <MapComponent /> */}
         </div>
       </div>
     </div>
